@@ -6,7 +6,7 @@ title: CSGuide
 titleTemplate: 记录回忆，知识和畅想的地方
 
 hero:
-  name: g~Nj$3J2^
+  name: FloppyPuff
   text: 记录回忆，知识和畅想的地方
   tagline: 一个普通CSer的成长之路
   image:
