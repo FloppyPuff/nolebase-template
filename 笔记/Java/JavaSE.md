@@ -354,7 +354,7 @@ list.sort(Comparator.reverseOrder()); // 逆序排列
 ```
 
 
-详情参考：[[java.util.Comparator#^3e5ba4|使用内置静态方法构建复杂排序逻辑]]
+详情参考：[](java.util.Comparator#^3e5ba4|使用内置静态方法构建复杂排序逻辑)
 
 ## LinkedList
 
@@ -1475,7 +1475,7 @@ for (Field field : fields) {
 }
 ```
 
-详情请参考：[[反射]]
+详情请参考：[反射](反射)
 
 ---
 # 注解
@@ -1561,10 +1561,10 @@ public @interface A {
 | `public T getDeclaredAnnotation(Class<T> annotationClass)`              | 获取指定的注解对象。       |
 | `public boolean isAnnotationPresent(Class<Annotation> annotationClass)` | 判断当前对象上是否存在某个注解。 |
 
-详情参考[[注解]]
+详情参考[注解](注解)
 
 ---
 
 # 动态代理
 
-详见[[代理]]
+详见[代理](代理)

@@ -1,6 +1,6 @@
 /** 文本 */
-export const siteName = '傅君豪'
-export const siteShortName = '傅君豪'
+export const siteName = 'nolebase'
+export const siteShortName = 'nolebase'
 export const siteDescription = '记录回忆，知识和畅想的地方'
 
 /** 文档所在目录 */

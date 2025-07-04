@@ -1,6 +1,6 @@
 # 简介
 
-![[Pasted image 20250630200728.png]]
+![Pasted image 20250630200728](assests/Pasted%20image%2020250630200728.png)
 
 # 代码实现
 
@@ -33,21 +33,21 @@ public class JDBCDemo {
 
 ## DriverManager
 
-![[Pasted image 20250630201547.png]]
+![Pasted image 20250630201547](assests/Pasted%20image%2020250630201547.png)
 
-![[Pasted image 20250630201554.png]]
+![Pasted image 20250630201554](assests/Pasted%20image%2020250630201554.png)
 
 ## Connection
 
-![[Pasted image 20250630202444.png]]
+![Pasted image 20250630202444](assests/Pasted%20image%2020250630202444.png)
 
 ## Statement
 
-![[Pasted image 20250630203134.png]]
+![Pasted image 20250630203134](assests/Pasted%20image%2020250630203134.png)
 
 ### ResultSet
 
-![[Pasted image 20250630204000.png]]
+![Pasted image 20250630204000](assests/Pasted%20image%2020250630204000.png)
 - 遍历输出
 ```java
 String url = "jdbc:mysql:///tlias";  
@@ -99,9 +99,9 @@ conn.close();
 
 ### PreparedStatement
 
-![[Pasted image 20250630205734.png]]
+![Pasted image 20250630205734](assests/Pasted%20image%2020250630205734.png)
 
-![[Pasted image 20250630212015.png]]
+![Pasted image 20250630212015](assests/Pasted%20image%2020250630212015.png)
 
 ```java
 String url = "jdbc:mysql:///tlias";  
@@ -128,15 +128,15 @@ try (Connection conn = DriverManager.getConnection(url, username, password);
 }
 ```
 
-![[Pasted image 20250630214116.png]]
+![Pasted image 20250630214116](assests/Pasted%20image%2020250630214116.png)
 
 # 数据库连接池
 
 ## 简介
 
-![[Pasted image 20250630214535.png]]
+![Pasted image 20250630214535](assests/Pasted%20image%2020250630214535.png)
 
-![[Pasted image 20250630215016.png]]
+![Pasted image 20250630215016](assests/Pasted%20image%2020250630215016.png)
 
 ## 实现
 

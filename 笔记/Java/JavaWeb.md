@@ -14,34 +14,34 @@
 
 ## 请求数据格式
 
-![[Pasted image 20250612201835.png]]
+![Pasted image 20250612201835](assests/Pasted%20image%2020250612201835.png)
 
-![[Pasted image 20250612201852.png]]
+![Pasted image 20250612201852](assests/Pasted%20image%2020250612201852.png)
 
 - *GET*:请求参数在请求行中，没有请求体，如：`/brand/findAll?name=OPPO&status=1`GET请求的大小是有限制的
 - *POST*:请求参数在请求体中，POST请求大小是没有限制的
 
 ## 响应格式
 
-![[Pasted image 20250612203303.png]]
+![Pasted image 20250612203303](assests/Pasted%20image%2020250612203303.png)
 
 
 
-![[Pasted image 20250612203709.png]]
+![Pasted image 20250612203709](assests/Pasted%20image%2020250612203709.png)
 
-![[Pasted image 20250612204531.png]]
+![Pasted image 20250612204531](assests/Pasted%20image%2020250612204531.png)
 
 ## 协议解析
 
 # 请求响应
 
-![[Pasted image 20250612215244.png]]
+![Pasted image 20250612215244](assests/Pasted%20image%2020250612215244.png)
 
 ## 请求
 
 ### PostMan
 
-![[Pasted image 20250612215655.png]]
+![Pasted image 20250612215655](assests/Pasted%20image%2020250612215655.png)
 
 ---
 ### 简单参数
@@ -335,11 +335,11 @@ public class EmpController {
 - `service`:业务层，处理具体的业务逻辑
 - `dao`:数据访问层（Data Access Object 持久层），负责数据访问操作，包括数据的增、删、改、查
 
-![[Pasted image 20250613201549.png]]
+![Pasted image 20250613201549](assests/Pasted%20image%2020250613201549.png)
 
 
 
-![[Pasted image 20250613201834.png]]
+![Pasted image 20250613201834](assests/Pasted%20image%2020250613201834.png)
 
 分别创建dao、service、controller包，在dao和service创建接口，最后在包内创建impl包，在impl包内创建实现接口的类
 
@@ -351,19 +351,19 @@ public class EmpController {
 
 - 衡量软件中各个层/模块之间的依赖、关联的程度
 
-![[Pasted image 20250613215732.png]]
+![Pasted image 20250613215732](assests/Pasted%20image%2020250613215732.png)
 
-![[Pasted image 20250613220557.png]]
+![Pasted image 20250613220557](assests/Pasted%20image%2020250613220557.png)
 
-![[Pasted image 20250613220602.png]]
+![Pasted image 20250613220602](assests/Pasted%20image%2020250613220602.png)
 
 若新增了一个`EmpServiceB`的类，只需将`EmpServiceA`中的`@Component`注解删除
 
 #### IOC
 
-![[Pasted image 20250616161341.png]]
+![Pasted image 20250616161341](assests/Pasted%20image%2020250616161341.png)
 
-![[Pasted image 20250616162201.png]]
+![Pasted image 20250616162201](assests/Pasted%20image%2020250616162201.png)
 
 - `@SpringBootApplication`具有包扫描作用，默认扫描当前包及其子包
 
@@ -401,9 +401,9 @@ public class EmpController {
 }
 ```
 
-![[Pasted image 20250616164135.png]]
+![Pasted image 20250616164135](assests/Pasted%20image%2020250616164135.png)
 
-![[Pasted image 20250616164234.png]]
+![Pasted image 20250616164234](assests/Pasted%20image%2020250616164234.png)
 
 # MyBatis
 
@@ -413,15 +413,15 @@ public class EmpController {
 
 ## JDBC
 
-![[Pasted image 20250616222722.png]]
+![Pasted image 20250616222722](assests/Pasted%20image%2020250616222722.png)
 
-![[Pasted image 20250616222730.png]]
+![Pasted image 20250616222730](assests/Pasted%20image%2020250616222730.png)
 
 ## 数据库连接池
 
-![[Pasted image 20250616223519.png]]
+![Pasted image 20250616223519](assests/Pasted%20image%2020250616223519.png)
 
-![[Pasted image 20250616223746.png]]
+![Pasted image 20250616223746](assests/Pasted%20image%2020250616223746.png)
 
 
 ## 删除数据
@@ -433,9 +433,9 @@ public interface EmpMapper {
     public void delete(Integer id);  //接口方法
 }
 ```
-![[Pasted image 20250617124618.png]]
+![Pasted image 20250617124618](assests/Pasted%20image%2020250617124618.png)
 
-![[Pasted image 20250617131013.png]]
+![Pasted image 20250617131013](assests/Pasted%20image%2020250617131013.png)
 
 `#{}` 是预编译占位符，安全高效，应优先使用；`${}` 是直接字符串替换，容易引发 SQL 注入，只在必要时谨慎使用。
 
@@ -471,7 +471,7 @@ public void testInsert(){
 
 ## 新增(主键返回)
 
-![[Pasted image 20250617134756.png]]
+![Pasted image 20250617134756](assests/Pasted%20image%2020250617134756.png)
 
 ```java
 @Options(useGeneratedKeys = true,keyProperty = "id")  //使用生成的主键并且赋值给Emp对象的id字段
@@ -499,7 +499,7 @@ public void update(Emp emp);
 public Emp getById(Integer id);
 ```
 
-![[Pasted image 20250617140708.png]]
+![Pasted image 20250617140708](assests/Pasted%20image%2020250617140708.png)
 
 
 解决方法：
@@ -547,11 +547,11 @@ mybatis.configuration.map-underscore-to-camel-case=true
 public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 ```
 
-![[Pasted image 20250617143557.png]]
+![Pasted image 20250617143557](assests/Pasted%20image%2020250617143557.png)
 
 ## XML映射文件
 
-![[Pasted image 20250617143951.png]]
+![Pasted image 20250617143951](assests/Pasted%20image%2020250617143951.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -569,7 +569,7 @@ public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 
 ### if
 
-![[Pasted image 20250617150735.png]]
+![Pasted image 20250617150735](assests/Pasted%20image%2020250617150735.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>  
@@ -628,10 +628,10 @@ public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
     where id = #{id}</update>
 ```
 使用`<set>`标签来去除多余逗号
-![[Pasted image 20250617155813.png]]
+![Pasted image 20250617155813](assests/Pasted%20image%2020250617155813.png)
 ### foreach
 
-![[Pasted image 20250617160722.png]]
+![Pasted image 20250617160722](assests/Pasted%20image%2020250617160722.png)
 
 ```xml
 <delete id="deleteByIds">  
@@ -651,7 +651,7 @@ public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 
 ### sql&include
 
-![[Pasted image 20250617161808.png]]
+![Pasted image 20250617161808](assests/Pasted%20image%2020250617161808.png)
 - 抽取SQL片段
 ```xml
 <sql id="commonSelect">  
@@ -686,12 +686,12 @@ public List<Emp> list(String name, short gender, LocalDate begin,LocalDate end);
 </select>
 ```
 
-![[Pasted image 20250618220344.png]]
+![Pasted image 20250618220344](assests/Pasted%20image%2020250618220344.png)
 
 
 # Lombok
 
-![[Pasted image 20250616224857.png]]
+![Pasted image 20250616224857](assests/Pasted%20image%2020250616224857.png)
 
 # PageHelper
 
@@ -746,8 +746,8 @@ spring.servlet.multipart.max-request-size=100MB //单次请求最大大小
 
 # 配置文件
 
-![[Pasted image 20250627134714.png]]
-![[Pasted image 20250627140600.png]]
+![Pasted image 20250627134714](assests/Pasted%20image%2020250627134714.png)
+![Pasted image 20250627140600](assests/Pasted%20image%2020250627140600.png)
 
 可以使用`@ConfigurationProperties`自动配置属性
 
@@ -763,23 +763,23 @@ public class AliOSSUtils {
 }
 ```
 
-![[Pasted image 20250627143014.png]]
+![Pasted image 20250627143014](assests/Pasted%20image%2020250627143014.png)
 
 # 登录认证
 
-![[Pasted image 20250627151404.png]]
+![Pasted image 20250627151404](assests/Pasted%20image%2020250627151404.png)
 
-![[Pasted image 20250627153319.png]]
+![Pasted image 20250627153319](assests/Pasted%20image%2020250627153319.png)
 
-  ![[Pasted image 20250627153608.png]]
-![[Pasted image 20250627154651.png]]
+  ![Pasted image 20250627153608](assests/Pasted%20image%2020250627153608.png)
+![Pasted image 20250627154651](assests/Pasted%20image%2020250627154651.png)
 
-![[Pasted image 20250627155146.png]]
+![Pasted image 20250627155146](assests/Pasted%20image%2020250627155146.png)
 
 ## JWT
-![[Pasted image 20250627155855.png]]
+![Pasted image 20250627155855](assests/Pasted%20image%2020250627155855.png)
 
-![[Pasted image 20250627161100.png]]
+![Pasted image 20250627161100](assests/Pasted%20image%2020250627161100.png)
 - 生成JWT
 ```java
 Map<String, Object> claims = new HashMap<>();  
@@ -801,11 +801,11 @@ Claims claims = Jwts.parser()
 System.out.println(claims);
 ```
 
-![[Pasted image 20250627163343.png]]
+![Pasted image 20250627163343](assests/Pasted%20image%2020250627163343.png)
 
 ## Filter 过滤器
 
-![[Pasted image 20250627171818.png]]
+![Pasted image 20250627171818](assests/Pasted%20image%2020250627171818.png)
 
 ```java
 @WebFilter(urlPatterns = "/*")  
@@ -830,15 +830,15 @@ public class DemoFilter implements Filter {
 ```
 - 还需要在SpringBoot启动类中添加`@ServletComponentScan`注解
 
-![[Pasted image 20250627185044.png]]
+![Pasted image 20250627185044](assests/Pasted%20image%2020250627185044.png)
 
-![[Pasted image 20250627190241.png]]
+![Pasted image 20250627190241](assests/Pasted%20image%2020250627190241.png)
 
 ## Interceptor 拦截器
 
-![[Pasted image 20250627200053.png]]
+![Pasted image 20250627200053](assests/Pasted%20image%2020250627200053.png)
 
-![[Pasted image 20250627200217.png]]
+![Pasted image 20250627200217](assests/Pasted%20image%2020250627200217.png)
 
 - 拦截器
 ```java
@@ -875,9 +875,9 @@ public class WebConfig implements WebMvcConfigurer {
 }
 ```
 
-![[Pasted image 20250627210014.png]]
+![Pasted image 20250627210014](assests/Pasted%20image%2020250627210014.png)
 
-![[Pasted image 20250627211351.png]]
+![Pasted image 20250627211351](assests/Pasted%20image%2020250627211351.png)
 
 # 异常处理
 
@@ -895,17 +895,17 @@ public class GlobalExceptionHandler {
 
 # Spring事务管理
 
-![[Pasted image 20250628141322.png]]
+![Pasted image 20250628141322](assests/Pasted%20image%2020250628141322.png)
 
-![[Pasted image 20250628142341.png]]
+![Pasted image 20250628142341](assests/Pasted%20image%2020250628142341.png)
 
-![[Pasted image 20250628142720.png]]
+![Pasted image 20250628142720](assests/Pasted%20image%2020250628142720.png)
 
-![[Pasted image 20250628145456.png]]
+![Pasted image 20250628145456](assests/Pasted%20image%2020250628145456.png)
 
 # AOP
 
-![[Pasted image 20250628150845.png]]
+![Pasted image 20250628150845](assests/Pasted%20image%2020250628150845.png)
 
 ```java
 @Component  
@@ -926,13 +926,13 @@ public class TimeAspect {
 }
 ```
 
-![[Pasted image 20250628163335.png]]
+![Pasted image 20250628163335](assests/Pasted%20image%2020250628163335.png)
 
-![[Pasted image 20250628165024.png]]
+![Pasted image 20250628165024](assests/Pasted%20image%2020250628165024.png)
 
-![[Pasted image 20250628165427.png]]
+![Pasted image 20250628165427](assests/Pasted%20image%2020250628165427.png)
 
-![[Pasted image 20250628171251.png]]
+![Pasted image 20250628171251](assests/Pasted%20image%2020250628171251.png)
 
 ```java
 @Slf4j  
@@ -971,22 +971,22 @@ public class MyAspect1 {
 }
 ```
 
-![[Pasted image 20250628171926.png]]
+![Pasted image 20250628171926](assests/Pasted%20image%2020250628171926.png)
 
 
 
-![[Pasted image 20250628181037.png]]
+![Pasted image 20250628181037](assests/Pasted%20image%2020250628181037.png)
 
 ## 切入点表达式
 
-![[Pasted image 20250628181429.png]]
-![[Pasted image 20250628201044.png]]
+![Pasted image 20250628181429](assests/Pasted%20image%2020250628181429.png)
+![Pasted image 20250628201044](assests/Pasted%20image%2020250628201044.png)
 
-![[Pasted image 20250628202354.png]]
+![Pasted image 20250628202354](assests/Pasted%20image%2020250628202354.png)
 
-![[Pasted image 20250628205015.png]]
+![Pasted image 20250628205015](assests/Pasted%20image%2020250628205015.png)
 
-![[Pasted image 20250628205653.png]]
+![Pasted image 20250628205653](assests/Pasted%20image%2020250628205653.png)
 - 注解
 ```java
 @Retention(RetentionPolicy.RUNTIME)  
@@ -1012,7 +1012,7 @@ public class MyAspect2 {
 
 ## 连接点
 
-![[Pasted image 20250628205947.png]]
+![Pasted image 20250628205947](assests/Pasted%20image%2020250628205947.png)
 
 ```java
 @Aspect  
@@ -1048,46 +1048,46 @@ public class MyAspect3 {
 
 ## 作用域
 
-![[Pasted image 20250628224456.png]]
+![Pasted image 20250628224456](assests/Pasted%20image%2020250628224456.png)
 
 - `@Lazy`:懒加载，在需要bean的时候才加载bean对象
 
-![[Pasted image 20250628225031.png]]
+![Pasted image 20250628225031](assests/Pasted%20image%2020250628225031.png)
 
 ## 第三方bean
-![[Pasted image 20250628225936.png]]
+![Pasted image 20250628225936](assests/Pasted%20image%2020250628225936.png)
 
-![[Pasted image 20250628230946.png]]
+![Pasted image 20250628230946](assests/Pasted%20image%2020250628230946.png)
 
 
-![[Pasted image 20250628231114.png]]
+![Pasted image 20250628231114](assests/Pasted%20image%2020250628231114.png)
 
 # SpringBoot 自动配置
 
-![[Pasted image 20250629165152.png]]
+![Pasted image 20250629165152](assests/Pasted%20image%2020250629165152.png)
 
-![[Pasted image 20250629165200.png]]
+![Pasted image 20250629165200](assests/Pasted%20image%2020250629165200.png)
 
 ## 条件配置
 
-![[Pasted image 20250629170716.png]]
+![Pasted image 20250629170716](assests/Pasted%20image%2020250629170716.png)
 
 ## 自定义starter
 
-![[Pasted image 20250629205131.png]]
+![Pasted image 20250629205131](assests/Pasted%20image%2020250629205131.png)
 
 # Maven
 
 ## 继承
 
 
-![[Pasted image 20250630110402.png]]
-![[Pasted image 20250630110409.png]]
-![[Pasted image 20250630110503.png]]
+![Pasted image 20250630110402](assests/Pasted%20image%2020250630110402.png)
+![Pasted image 20250630110409](assests/Pasted%20image%2020250630110409.png)
+![Pasted image 20250630110503](assests/Pasted%20image%2020250630110503.png)
 
 ## 版本锁定
 
-![[Pasted image 20250630111748.png]]
+![Pasted image 20250630111748](assests/Pasted%20image%2020250630111748.png)
 
-![[Pasted image 20250630112606.png]]
+![Pasted image 20250630112606](assests/Pasted%20image%2020250630112606.png)
 
